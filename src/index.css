@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-marker: 'Permanent Marker', cursive;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  
+  --color-punk-black: #0b0b0c;
+  --color-punk-surface: #151518;
+  --color-punk-border: #28282e;
+  --color-punk-white: #f3f2ee;
+  --color-punk-newsprint: #dcd8ce;
+  --color-punk-red: #ff003f;
+  --color-punk-magenta: #ff007f;
+}
+
+/* Base Punk Fanzine Textures & Accents */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-marker {
+  font-family: var(--font-marker);
+}
+
+.font-sans-clean {
+  font-family: var(--font-sans);
+}
+
+/* Halftone print dot pattern */
+.bg-halftone {
+  background-image: radial-gradient(#26262a 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+.bg-halftone-dense {
+  background-image: radial-gradient(#ff003f 1px, transparent 1px);
+  background-size: 6px 6px;
+}
+
+/* Photocopier scanlines */
+.bg-scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+/* Masking Tape effect */
+.masking-tape {
+  position: relative;
+}
+.masking-tape::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  width: 90px;
+  height: 24px;
+  background-color: rgba(220, 216, 206, 0.75);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transform: rotate(-3deg);
+  z-index: 10;
+  clip-path: polygon(3% 0%, 97% 2%, 100% 98%, 0% 95%);
+  pointer-events: none;
+}
+
+/* Torn paper edge clip-path */
+.torn-edge {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% calc(100% - 10px),
+    98% 100%,
+    95% calc(100% - 6px),
+    92% 100%,
+    88% calc(100% - 8px),
+    85% 100%,
+    80% calc(100% - 7px),
+    75% 100%,
+    70% calc(100% - 8px),
+    65% 100%,
+    60% calc(100% - 5px),
+    55% 100%,
+    50% calc(100% - 9px),
+    45% 100%,
+    40% calc(100% - 6px),
+    35% 100%,
+    30% calc(100% - 8px),
+    25% 100%,
+    20% calc(100% - 5px),
+    15% 100%,
+    10% calc(100% - 7px),
+    5% 100%,
+    0% calc(100% - 8px)
+  );
+}
+
+/* Rubber stamp badge */
+.stamp-border {
+  border: 3px dashed #ff003f;
+  border-radius: 2px;
+}
+
+/* Smooth custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0b0c;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b2b32;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff003f;
+}

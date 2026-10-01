@@ -1,0 +1,6 @@
+{
+  "name": "El Juego del Movimiento",
+  "description": "Portal educativo y cuaderno escénico punk sobre el cuerpo como herramienta escénica, la partitura teatral de acción y el creador 360°.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
